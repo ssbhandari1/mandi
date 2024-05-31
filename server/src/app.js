@@ -9,17 +9,17 @@ const  orderRoutes = require("./routes/order.js");
 const  paymentRoutes = require("./routes/payment.js");
 const  addToCartRoutes = require("./routes/addToCart.js");
 const  addressRoutes = require("./routes/shippingAdrs.js");
-
-
 const port = 8080;
 
 connectDB()
 const app=express()
 console.log(port)
-app.use(cors())
+app.use(cors());
 
 app.use(express.json());
 app.use(morgan('dev'))
+
+// app.use(tokenRefreshMiddleware);
 
 //Using Routes
 app.use('/api/v1/user', userRoutes)

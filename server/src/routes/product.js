@@ -5,7 +5,7 @@ const adminOnly = require("../middlewares/auth");
 
 const app = express.Router();
 
-//api/v1/product/latest
+//api/v1/product
 app.post('/new',adminOnly, singleUpload, newProduct)
 
 app.get('/latest',getLatestProducts)
@@ -15,7 +15,6 @@ app.get('/all',searchAllProducts)
 app.get('/category',getAllCategory)
 
 app.put('/addProduct',addProduct)
-
 
 app.get('/admin-products',adminOnly, getAdminProduct)
 

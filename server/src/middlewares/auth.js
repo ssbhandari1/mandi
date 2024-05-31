@@ -1,7 +1,6 @@
 const User = require("../models/user.js");
 
 const adminOnly =async(req, res, next)=>{
-
     const { id } = req.query;
     if(!id) 
     return res.status(401).json({

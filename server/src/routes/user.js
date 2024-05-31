@@ -11,7 +11,7 @@ app.post('/new',newUser);
 app.post('/logIn',logInUser);
 
 //route - /api/v1/user/all
-app.get('/all',adminOnly, getAllUser)
+app.get('/all/:user',adminOnly, getAllUser)
 
 //route - /api/v1/user/updateUser
 app.patch('/updateUser',singleUpload, updateUserInfo)
